@@ -307,7 +307,7 @@ def setup_gpu():
 
         if 'c' in str(devices[0]).lower():
             backward_device = "cpu"
-            setup_cuda(), setup_cpu()
+            setup_cpu()
         else:
             backward_device = "cuda:" + devices[0]
             setup_cuda()
